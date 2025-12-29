@@ -1,6 +1,8 @@
 import pandas as pd
 from statsmodels.tsa.statespace.sarimax import SARIMAX
 import matplotlib.pyplot as plt
+from sklearn.metrics import mean_absolute_error, mean_squared_error
+import numpy as np
 
 # Load the processed train data (up to 2020)
 train = pd.read_csv('data/train_data.csv', parse_dates=['DATE'], index_col='DATE')['WERT']
@@ -35,6 +37,10 @@ print(f"Actual accidents for January 2021: {int(actual_2021_01)}")
 # Error
 mae = abs(predicted_value - actual_2021_01)
 print(f"Absolute Error (MAE): {mae}")
+
+
+rmse = np.sqrt(mean_squared_error([actual_2021_01], [predicted_value]))
+print(f"Root Mean Squared Error (RMSE): {rmse:.2f}")
 
 # Plot forecast vs actual for first few years (visual validation)
 future_forecast = model_fit.get_forecast(steps=len(future))
