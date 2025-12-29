@@ -44,13 +44,13 @@ I explored multiple approaches to find the best-performing model:
 ## Visualizations
 
 ### 1. Historical Accidents by Category (2000–2020)
-![All Categories](historical_viz.png)
+![All Categories](visualization/historical_viz.png)
 
 ### 2. Alcohol-Related Accidents with Train/Forecast Split
-![Alcohol Focus](alcohol_historical_viz.png)
+![Alcohol Focus](visualization/alcohol_historical_viz.png)
 
 ### 3. SARIMA Forecast vs Actual (2021–2025)
-![Forecast vs Actual](sarima_forecast_vs_actual.png)
+![Forecast vs Actual](visualization/sarima_forecast_vs_actual.png)
 
 ---
 
