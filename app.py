@@ -53,7 +53,11 @@ def predict():
         
         prediction = predict_accidents(year, month)
         
-        return jsonify({"prediction": prediction})
+        return jsonify({
+            "year": year,
+            "month": month,
+            "prediction": prediction
+        })
     
     except Exception as e:
         return jsonify({"error": str(e)}), 500
