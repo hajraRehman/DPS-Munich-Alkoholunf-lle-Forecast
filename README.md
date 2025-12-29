@@ -86,9 +86,10 @@ Enhanced response includes requested year and month for better usability.
 ├── train_data.csv                  # Cleaned training data (2000–2020)
 ├── requirements.txt
 ├── Procfile                        # Deployment config
-├── historical_viz.png              # All categories visualization
-├── alcohol_historical_viz.png       # Focused alcohol accidents
-├── sarima_forecast_vs_actual.png   # Model performance plot
+├── visualizations/
+|   ├──historical_viz.png              # All categories visualization
+|   ├── alcohol_historical_viz.png       # Focused alcohol accidents
+|   ├── sarima_forecast_vs_actual.png   # Model performance plot
 └── src/
     ├── process_data.py
     ├── visualize_categories.py
