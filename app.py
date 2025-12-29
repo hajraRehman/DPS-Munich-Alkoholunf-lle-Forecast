@@ -7,7 +7,7 @@ app = Flask(__name__)
 print("Loading training data and fitting SARIMA model...")
 
 # Load the clean training data (up to 2020)
-train = pd.read_csv('data/train_data.csv', parse_dates=['DATE'], index_col='DATE')['WERT']
+train = pd.read_csv('train_data.csv', parse_dates=['DATE'], index_col='DATE')['WERT']
 
 # Same winning parameters that gave us prediction=21 and MAE=5
 model = SARIMAX(
